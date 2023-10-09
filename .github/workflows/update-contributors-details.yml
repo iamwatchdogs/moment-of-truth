@@ -8,8 +8,9 @@ on:
       - main
 
 env:
-  REPO_OWNER: ${{ github.repository_owner }}
   REPO_NAME: ${{ github.repository }}
+  PR_NUMBER: ${{ github.event.pull_request.number }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   update-by-pr:
@@ -31,21 +32,20 @@ jobs:
       - name: Getting PR details
         run: |
           touch pr.json
-          gh pr view 19 --json author,url,files > pr.json 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          gh pr view $PR_NUMBER --json author,url,files > pr.json 
 
       - name: Updating log file
         run: |
           python update_contributors_log.py
           cat .github/data/contributors-log.json
-        env:
-          PR_NUMBER: ${{ github.event.pull_request.number }}
           
       - name: Updating index.md file
         run: |
           python update_index_md.py
-          cat .github/data/contributors-log.json
+          cat index.md
+
+      - name: Remove unwanted files
+        run: rm pr.json
 
       - name: Commit and Push
         run: |
