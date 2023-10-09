@@ -4,10 +4,15 @@ import os
 import json
 
 '''
-Requires the following environment variable:
-- 'REPO_OWNER'
-- 'REPO_NAME'
-- 'PR_NUMBER'
+This script requires following environment variables:
+
+- REPO_NAME:
+  > example: 'iamwatchdogs/test'
+  > GitHub action variable: ${{ github.repository }}
+
+- PR_NUMBER:
+  > example: '5'
+  > GitHub action variable: ${{ github.event.pull_request.number }}
 '''
 
 def get_project_title(pr_data):
@@ -34,11 +39,10 @@ def get_demo_path(pr_data):
 
 	# Getting required values
 	REPO_NAME = os.environ.get('REPO_NAME')
-	REPO_OWNER = os.environ.get('REPO_OWNER')
 	PROJECT_NAME = get_project_title(pr_data)
 
 	# Setting default value
-	demo_path = f'https://github.com/{REPO_OWNER}/{REPO_NAME}/tree/main/{PROJECT_NAME}'
+	demo_path = f'https://github.com/{REPO_NAME}/tree/main/{PROJECT_NAME}'
 	found_required_path = False
 
 	# Iterating through the "files" list
@@ -119,3 +123,4 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
