@@ -1,4 +1,4 @@
-name: Add Updated to README
+name: Update Contributor Details
 
 on:
   pull_request_target:
