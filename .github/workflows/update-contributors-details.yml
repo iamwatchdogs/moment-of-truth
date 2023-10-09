@@ -36,12 +36,12 @@ jobs:
 
       - name: Updating log file
         run: |
-          python update_contributors_log.py
+          python .github/scripts/update_contributors_log.py
           cat .github/data/contributors-log.json
           
       - name: Updating index.md file
         run: |
-          python update_index_md.py
+          python .github/scripts/update_index_md.py
           cat index.md
 
       - name: Remove unwanted files
