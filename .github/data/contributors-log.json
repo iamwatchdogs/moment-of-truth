@@ -1,2 +1,11 @@
 {
+  "test-2": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "4"
+    ],
+    "demo-path": "test-2"
+  }
 }
