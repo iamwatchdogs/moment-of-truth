@@ -5,7 +5,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <br>
 
 <!-- TABLE BEGINS -->
-<table width="100%">
+<table style="width:100%">
   <tr>
     <th>Project Title</th>
     <th>Contributor Names</th>
