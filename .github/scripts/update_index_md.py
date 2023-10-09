@@ -7,8 +7,8 @@ import json
 This script requires following environment variables:
 
 - REPO_NAME:
-> example: 'iamwatchdogs/test'
-> GitHub action variable: ${{ github.repository }}
+  > example: 'iamwatchdogs/test'
+  > GitHub action variable: ${{ github.repository }}
 '''
 
 def find_table_points(lines):
