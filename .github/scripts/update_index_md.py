@@ -4,9 +4,11 @@ import os
 import json
 
 '''
-Requires the following environment variable:
-- 'REPO_OWNER'
-- 'REPO_NAME'
+This script requires following environment variables:
+
+- REPO_NAME:
+> example: 'iamwatchdogs/test'
+> GitHub action variable: ${{ github.repository }}
 '''
 
 def find_table_points(lines):
@@ -43,7 +45,6 @@ def main():
 
 	# Retrieving Environmental variables
 	REPO_NAME = os.environ.get('REPO_NAME')
-	REPO_OWNER = os.environ.get('REPO_OWNER')
 
 	# Setting path for the log JSON file
 	TARGET_FILE = 'index.md'
@@ -80,7 +81,7 @@ def main():
 
 		# Processing pull-requests
 		pull_requests = details['pull-request-number']
-		pull_requests_list = [f'[#{pr}](https://github.com/{REPO_OWNER}/{REPO_NAME}/pull/{pr} "visit pr \#{pr}")' for pr in pull_requests]
+		pull_requests_list = [f'[#{pr}](https://github.com/{REPO_NAME}/pull/{pr} "visit pr \#{pr}")' for pr in pull_requests]
 		pull_requests_output = ', '.join(pull_requests_list)
 
 		# Processing demo-path
