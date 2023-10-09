@@ -5,20 +5,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <br>
 
 <!-- TABLE BEGINS -->
-<table>
-  <tr>
-    <th>Project Title</th>
-    <th>Contributor Names</th>
-    <th>Pull Requests</th>
-    <th>Demo</th>
-  </tr>
-  <tr>
-    <td>test-2</td>
-    <td><a href="https://github.com/iamwatchdogs" title="goto iamwatchdogs profile">iamwatchdogs</a></td>
-    <td><a href="https://github.com/iamwatchdogs/moment-of-truth/pull/4" title="visit pr #4">#4</a></td>
-    <td><a href="test-2" title="view the result of test-2">./test-2/</a></td>
-  </tr>
-</table>
+ Project Title | Contributor Names | Pull Requests | Demo |
+| --- | --- | --- | --- |
+| test-2 | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#4](https://github.com/iamwatchdogs/moment-of-truth/pull/4 "visit pr \#4") | [./test-2/](test-2 "view the result of test-2") |
 <!-- TABLE ENDS -->
 
 <br>
