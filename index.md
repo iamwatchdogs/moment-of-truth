@@ -15,6 +15,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 | :---: | :---: | :---: | :---: |
 | test-2 | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#4](https://github.com/iamwatchdogs/moment-of-truth/pull/4 "visit pr \#4") | [/iamwatchdogs/moment-of-truth/test-2/](test-2 "view the result of test-2") |
 | test-3 | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#5](https://github.com/iamwatchdogs/moment-of-truth/pull/5 "visit pr \#5") | [/iamwatchdogs/moment-of-truth/test-3/](test-3/index "view the result of test-3") |
+| root | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#6](https://github.com/iamwatchdogs/moment-of-truth/pull/6 "visit pr \#6") | [/iamwatchdogs/moment-of-truth/root/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/root "view the result of root") |
 <!-- TABLE ENDS -->
 
 </div>
