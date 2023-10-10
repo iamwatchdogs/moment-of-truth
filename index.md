@@ -13,7 +13,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- TABLE BEGINS -->
 | Project Title | Contributor Names | Pull Requests | Demo |
 | :---: | :---: | :---: | :---: |
-| lets go boi | [REC-SAM](https://github.com/REC-SAM "goto REC-SAM profile") | [#9](https://github.com/iamwatchdogs/moment-of-truth/pull/9 "visit pr \#9") | [/iamwatchdogs/moment-of-truth/lets go boi/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/lets%20go%20boi "view the result of lets go boi") |
+| it should work now | [REC-SAM](https://github.com/REC-SAM "goto REC-SAM profile") | [#10](https://github.com/iamwatchdogs/moment-of-truth/pull/10 "visit pr \#10") | [/iamwatchdogs/moment-of-truth/it should work now/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/it%20should%20work%20now "view the result of it should work now") |
 <!-- TABLE ENDS -->
 
 </div>

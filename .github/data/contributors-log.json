@@ -1,0 +1,11 @@
+{
+  "it should work now": {
+    "contributor-name": [
+      "REC-SAM"
+    ],
+    "pull-request-number": [
+      "10"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/it%20should%20work%20now"
+  }
+}
