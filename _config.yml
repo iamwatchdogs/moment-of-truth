@@ -4,5 +4,9 @@ title: 'Moment-of-truth'
 headline: 'testing headline'
 description: 'testing description'
 logo: '/assets/imgs/favicon.ico'
-image: '/assets/imgs/og-dp.png'
+image:
+  path: '/assets/imgs/og-dp.png'
+  height: 1200
+  width: 630
+  alt: Page Cover
 ---
