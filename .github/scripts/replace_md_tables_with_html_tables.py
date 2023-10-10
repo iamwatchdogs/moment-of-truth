@@ -96,7 +96,7 @@ def main():
 		# Appending all data together
 		updated_lines.append('\t<tr>\n')
 		updated_lines.append(f'\t\t<td>{title}</td>\n')
-		updated_lines.append(f'\t\t<td>{contributors_name_output}</td>\n')
+		updated_lines.append(f'\t\t<td>{contributors_names_output}</td>\n')
 		updated_lines.append(f'\t\t<td>{pull_requests_output}</td>\n')
 		updated_lines.append(f'\t\t<td>{demo_path_output}</td>\n')
 		updated_lines.append(f'\t</tr>\n')
