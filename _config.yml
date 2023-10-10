@@ -1,6 +1,7 @@
 ---
 theme: jekyll-theme-cayman
 title: 'Moment-of-truth'
+page_title: 'this appears for og'
 headline: 'testing headline'
 description: 'testing description'
 logo: '/assets/imgs/favicon.ico'
@@ -10,3 +11,6 @@ defaults:
     values:
       image: 'assets/imgs/og-dp.jpg'
 ---
+
+# For reference, Jekyll SEO Tag:
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/lib/template.html
