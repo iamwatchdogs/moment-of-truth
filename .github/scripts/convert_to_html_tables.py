@@ -102,7 +102,7 @@ def main():
 		updated_lines.append(f'\t</tr>\n')
 
 	# Table footer
-	table_footer = ['</table>']
+	table_footer = ['</table>\n']
 
 	# Updating the lines with updated data
 	lines[table_start+1:table_end] = table_header+updated_lines+table_footer
