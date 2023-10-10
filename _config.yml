@@ -1,9 +1,7 @@
 ---
 theme: jekyll-theme-cayman
-title: test
-description: testing
 title: 'Moment-of-truth'
-description: 'testing the configs'
+headline: 'testing headline'
+description: 'testing description'
 logo: '/assets/imgs/favicon.ico'
-image: '/assets/img/og-dp.png'
 ---
