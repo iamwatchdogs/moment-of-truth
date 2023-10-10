@@ -7,5 +7,14 @@
       "4"
     ],
     "demo-path": "test-2"
+  },
+  "test-3": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "5"
+    ],
+    "demo-path": "test-3/index"
   }
 }
