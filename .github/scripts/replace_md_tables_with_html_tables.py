@@ -61,12 +61,15 @@ def main():
 	# Calculating Stating and ending points of the targeted table
 	table_start, table_end = find_table_points(lines)
 
-	# Creating table header if doesn't exist
-	if table_end - table_start == 1:
-		table_header = list()
-		table_header.append('| Project Title | Contributor Names | Pull Requests | Demo |\n')
-		table_header.append('| --- | --- | --- | --- |\n')
-		lines[table_start+1:table_end] = table_header
+	# Creating HTML table header to replace md table
+	table_header = list()
+	table_header.append('<table>\n')
+	table_header.append('\t<tr>\n')
+	table_header.append('\t\t<th>Project Title</th>\n')
+	table_header.append('\t\t<th>Contributor Names</th>\n')
+	table_header.append('\t\t<th>Pull Requests</th>\n')
+	table_header.append('\t\t<th>Demo</th>\n')
+	table_header.append('\t</tr>\n')
 
 	# Initializing empty list for lines
 	updated_lines = list()
@@ -91,10 +94,17 @@ def main():
 		demo_path_output = f'[/{REPO_NAME}/{title}/]({demo_path} "view the result of {title}")'
 
 		# Appending all data together
-		updated_lines.append(f'| {title} | {contributors_names_output} | {pull_requests_output} | {demo_path_output} |\n')
+		update_lines.append('\t<tr>\n')
+		update_lines.append(f'\t\t<td>{title}</td>\n')
+		update_lines.append(f'\t\t<td>{contributors_name_output}</td>\n')
+		update_lines.append(f'\t\t<td>{pull_requests_output}</td>\n')
+		update_lines.append(f'\t\t<td>{demo_path_output}</td>\n')
+		update_lines.append(f'\t</tr>\n')
 
+	# Table footer
+	table_footer = ['</table>']
 	# Updating the lines with updated data
-	lines[table_start+3:table_end] = updated_lines
+	lines[table_start+1:table_end] = table_header+updated_lines+table_footer
 
 	# Updating the target file
 	with open(TARGET_FILE, 'w') as file:
