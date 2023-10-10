@@ -36,7 +36,7 @@ jobs:
 
       - name: Updating log file
         run: |
-          if [ ! -d "/path/to/directory" ]; then
+          if [ ! -d ".github/data" ]; then
             mkdir .github/data
             echo "Create `.github/data` directory"
           fi
