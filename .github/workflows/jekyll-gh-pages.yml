@@ -26,7 +26,7 @@ jobs:
       - name: Setting up python environment
         uses: actions/setup-python@v4.7.1
       - name: Replace md table with HTML table
-        run: python .github/scripts/replace_md_tables_with_html_tables.py
+        run: python .github/scripts/convert_to_html_tables.py
         env:
           REPO_NAME: ${{ github.repository }}
       - name: Setup Pages
