@@ -79,19 +79,19 @@ def main():
 
 		# Processing contributors-names
 		contributors_names = details['contributor-name']
-		contributors_names_list = [f'[{name}](https://github.com/{name} "goto {name} profile")' for name in contributors_names]
+		contributors_names_list = [f'<a href="https://github.com/{name}" title="goto {name} profile")>{name}</a>' for name in contributors_names]
 		contributors_names_output = ', '.join(contributors_names_list)
 
 		# Processing pull-requests
 		pull_requests = details['pull-request-number']
-		pull_requests_list = [f'[#{pr}](https://github.com/{REPO_NAME}/pull/{pr} "visit pr \#{pr}")' for pr in pull_requests]
+		pull_requests_list = [f'<a href="https://github.com/{REPO_NAME}/pull/{pr}" title="visit pr \#{pr}">{pr}</a>' for pr in pull_requests]
 		pull_requests_output = ', '.join(pull_requests_list)
 
 		# Processing demo-path
 		demo_path = details['demo-path']
 		if ' ' in demo_path:
 			demo_path = '%20'.join(demo_path.split())
-		demo_path_output = f'[/{REPO_NAME}/{title}/]({demo_path} "view the result of {title}")'
+		demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/{title}/</a>'
 
 		# Appending all data together
 		updated_lines.append('\t<tr>\n')
