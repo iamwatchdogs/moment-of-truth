@@ -5,6 +5,6 @@ headline: 'testing headline'
 description: 'testing description'
 logo: '/assets/imgs/favicon.ico'
 image:
-  path: '/assets/imgs/new-og-dp-resized.png'
+  path: 'assets/imgs/og-dp.jpg'
   alt: Page Cover
 ---
