@@ -64,7 +64,7 @@ def main():
 	# Creating HTML table header to replace md table
 	table_header = list()
 	table_header.append('<table>\n')
-	table_header.append('\t<tr>\n')
+	table_header.append('\t<tr align="center">\n')
 	table_header.append('\t\t<th>Project Title</th>\n')
 	table_header.append('\t\t<th>Contributor Names</th>\n')
 	table_header.append('\t\t<th>Pull Requests</th>\n')
