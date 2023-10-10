@@ -79,7 +79,7 @@ def main():
 
 		# Processing contributors-names
 		contributors_names = details['contributor-name']
-		contributors_names_list = [f'<a href="https://github.com/{name}" title="goto {name} profile")>{name}</a>' for name in contributors_names]
+		contributors_names_list = [f'<a href="https://github.com/{name}" title="goto {name} profile">{name}</a>' for name in contributors_names]
 		contributors_names_output = ', '.join(contributors_names_list)
 
 		# Processing pull-requests
