@@ -36,6 +36,10 @@ jobs:
 
       - name: Updating log file
         run: |
+          if [ ! -d "/path/to/directory" ]; then
+            mkdir .github/data
+            echo "Create `.github/data` directory"
+          fi
           python .github/scripts/update_contributors_log.py
           cat .github/data/contributors-log.json
           
