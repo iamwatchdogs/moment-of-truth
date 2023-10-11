@@ -25,8 +25,3 @@ jobs:
       uses: a-b-r-o-w-n/eslint-action@v2
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: ESLint Action eslintrc
-      uses: mrdivyansh/eslint-action@v1.0.7
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
