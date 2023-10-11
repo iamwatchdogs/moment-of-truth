@@ -65,8 +65,8 @@ jobs:
           script: |
             import os
             import json
-            with open('pr.json','r') as json:
-              data = json.load(json)
+            with open('pr.json','r') as json_file:
+              data = json.load(json_file)
               for file in data["files"]:
                 path = file["path"]
                 if os.path.exists(path):
