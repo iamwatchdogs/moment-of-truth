@@ -1,4 +1,4 @@
-public class Test {  
+public class TEST {  
   
     //Represent a node
     class Node{  
