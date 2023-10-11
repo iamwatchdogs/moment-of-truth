@@ -41,8 +41,12 @@ def get_demo_path(pr_data):
 	REPO_NAME = os.environ.get('REPO_NAME')
 	PROJECT_NAME = get_project_title(pr_data)
 
+	# Handling a base case
+	if PROJECT_NAME == 'root':
+		return f'https://github.com/{REPO_NAME}/'
+
 	# Setting default value
-	demo_path = f'https://github.com/{REPO_NAME}/tree/main/{PROJECT_NAME}'
+	demo_path = f'https://github.com/{REPO_NAME}/tree/main/{PROJECT_NAME}' 
 	found_required_path = False
 
 	# Iterating through the "files" list
