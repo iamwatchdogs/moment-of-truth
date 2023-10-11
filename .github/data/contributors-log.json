@@ -30,5 +30,14 @@
       "19"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/.github"
+  },
+  "root": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "20"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/"
   }
 }
