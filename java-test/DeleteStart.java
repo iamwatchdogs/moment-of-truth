@@ -1,6 +1,6 @@
 public class DeleteStart {  
   
-    //Represent a node of the singly linked list  
+    //Represent a node
     class Node{  
         int data;  
         Node next;  
