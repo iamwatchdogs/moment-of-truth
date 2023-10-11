@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.1.0
 
-      - name: Set up Java
-        uses: actions/setup-java@v3.13.0
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+      # - name: Set up Java
+      #   uses: actions/setup-java@v3.13.0
+      #   with:
+      #     java-version: '17'
+      #     distribution: 'temurin'
 
       - name: Checkstyle for Java
         uses: dbelyaev/action-checkstyle@v0.9.6
