@@ -28,7 +28,7 @@ jobs:
       #     clang-format-12 -style=Google c-cpp-test/should-not-pass.c
       #     clang-format-12 -style=Google c-cpp-test/test.c
 
-      - name: Fail fast?!
+      - name: Fail checks
         if: steps.linter.outputs.checks-failed > 0
         run: |
           echo "Some files failed the linting checks!"
@@ -58,21 +58,19 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Python Script in Actions
+      - name: Python script for clang diff
         if: steps.linter.outputs.checks-failed > 0
         uses: jannekem/run-python-script-action@v1
         with:
           script: |
             import os
             import json
+            import sys
             with open('pr.json','r') as json_file:
               data = json.load(json_file)
               for file in data["files"]:
                 path = file["path"]
                 if os.path.exists(path):
                   os.system(f'clang-format-12 -style=Google {path}')
-                  print('\n----------------------------------------\n')
-
-      - name: Trigger ci failed exit code
-        if: steps.linter.outputs.checks-failed > 0
-        run: exit 1
+                  os.system('echo ----------------------------------------')
+            sys.exit(1)
