@@ -1,7 +1,7 @@
 public class TEST 
   
     //Represent the head and tail of the singly linked list  
-    public Node head = null 
+    public Node head = null;
     public Node tail = null;  
   
     //addNode() will add a new node to the list  
