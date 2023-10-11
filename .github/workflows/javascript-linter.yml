@@ -26,5 +26,7 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: ESLint Plus
-      uses: bradennapier/eslint-plus-action@v3
+    - name: ESLint Action eslintrc
+      uses: mrdivyansh/eslint-action@v1.0.7
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
