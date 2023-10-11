@@ -2,6 +2,6 @@
 
 int main()
 {
-  printf("I have removed the exit code. Now, it should work");
+  printf("Plz work this time");
   return 0;
 }
