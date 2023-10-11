@@ -2,6 +2,6 @@
 
 int main()
 {
-  printf("Plz work this time");
+  printf("Plz work this time, please work");
   return 0;
 }
