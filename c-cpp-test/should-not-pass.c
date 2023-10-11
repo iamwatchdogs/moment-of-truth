@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
   int test = 0;
-  return test;
+  print("%d",test);
+  return 0;
 }
