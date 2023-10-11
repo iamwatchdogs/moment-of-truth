@@ -19,11 +19,13 @@
   },
   ".github": {
     "contributor-name": [
-      "iamwatchdogs"
+      "iamwatchdogs",
+      "REC-SAM"
     ],
     "pull-request-number": [
       "12",
-      "14"
+      "14",
+      "16"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/.github"
   },
