@@ -17,7 +17,10 @@ jobs:
       uses: actions/setup-node@v3.8.1
 
     - name: install ESLint
-      uses: stefanoeb/eslint-action@1.0.2
+      run: | 
+        npm init -y
+        npm install eslint
+      # uses: stefanoeb/eslint-action@1.0.2
 
     - name: ESLint Suggestion
       uses: CatChen/eslint-suggestion-action@v2.1.18
