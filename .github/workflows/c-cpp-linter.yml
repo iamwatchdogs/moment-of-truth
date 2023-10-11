@@ -71,7 +71,7 @@ jobs:
                 path = file["path"]
                 if os.path.exists(path):
                   os.system(f'clang-format-12 -style=Google {path}')
-                  print('\n----------------------------------------\n'
+                  print('\n----------------------------------------\n')
 
       - name: Trigger ci failed exit code
         if: steps.linter.outputs.checks-failed > 0
