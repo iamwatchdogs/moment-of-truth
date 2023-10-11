@@ -1,18 +1,24 @@
-def reverse_words(string):
-	# split the string into a list of words
-	words = string.split()
-
-	# initialize an empty string to store the reversed words
-	reversed_string = ''
-
-	# loop through the words in reverse order and append them to the reversed string
-	for i in range(len(words)-1, -1, -1):
-		reversed_string += words[i] + ' '
-
-	# remove the extra space at the end of the reversed string and return it
-	return reversed_string.strip()
-
-# example usage
+# initializing string
 string = "geeks quiz practice code"
-reversed_string = reverse_words(string)
-print(reversed_string) # output: "code practice quiz geeks"
+
+# creating an empty stack
+stack = []
+
+# pushing words onto the stack
+for word in string.split():
+	stack.append(word)
+
+# creating an empty list to store the reversed words
+reversed_words = []
+
+# popping words off the stack and appending them to the list
+while stack:
+	reversed_words.append(stack.pop())
+
+# joining the reversed words with a space
+reversed_string = " ".join(reversed_words)
+
+# printing the reversed string
+print(reversed_string)
+
+#This code is contributed by Edula Vinay Kumar Reddy
