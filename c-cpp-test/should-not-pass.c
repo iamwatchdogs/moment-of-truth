@@ -2,7 +2,6 @@
 
 int main()
 {
-  int test = 0;
-  printf("%d",test);
+  printf("I have removed the exit code. Now, it should work");
   return 0;
 }
