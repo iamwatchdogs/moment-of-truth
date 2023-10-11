@@ -12,10 +12,7 @@ jobs:
     steps:
     - name: Checking out the repo
       uses: actions/checkout@v4.1.0
-
-    - name: install node
-      uses: actions/setup-node@v3.8.1
-
+      
     - name: ESLint Annotate
       uses: a-b-r-o-w-n/eslint-action@v2
       with:
