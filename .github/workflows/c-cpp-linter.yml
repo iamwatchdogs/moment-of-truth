@@ -32,9 +32,9 @@ jobs:
       #     clang-format-12 -style=Google c-cpp-test/test.c
           
   help-for-failed-ci:
-    if: steps.linter.outputs.checks-failed > 0
     runs-on: ubuntu-latest
     needs: cpp-linter
+    if: cpp-linter.steps.linter.outputs.checks-failed > 0
     steps:
       - name: Fail fast?!
         run: |
