@@ -21,15 +21,28 @@ jobs:
     - name: Install Eslint
       run: |
         npm init -y
-        npm install eslint --save-dev
+        npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint typescript
         
     - name: Create ESLint configuration (if not already done)
       run: |
         if [ ! -f .eslintrc.js ]; then
-          npx eslint --init
+          touch .eslintrc.js
+          echo 'module.exports = {' >> .eslintrc.js
+          echo '  "root": true,' >> .eslintrc.js
+          echo '  "env": {' >> .eslintrc.js
+          echo '      "node": true' >> .eslintrc.js
+          echo '  },' >> .eslintrc.js
+          echo '  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],' >> .eslintrc.js
+          echo '  "plugins": ["@typescript-eslint"],' >> .eslintrc.js
+          echo '  "parserOptions": {' >> .eslintrc.js
+          echo '      "ecmaVersion": "latest",' >> .eslintrc.js
+          echo '      "sourceType": "module"' >> .eslintrc.js
+          echo '  },' >> .eslintrc.js
+          echo '}' >> .eslintrc.js
+          cat .eslintrc
         fi
 
     - name: Run ESLint
       run: |
-        npm run lint
+        npx eslint . --ext .js,.ts
 
