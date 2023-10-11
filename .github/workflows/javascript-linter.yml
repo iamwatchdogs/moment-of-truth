@@ -16,13 +16,17 @@ jobs:
     - name: install node
       uses: actions/setup-node@v3.8.1
 
-    - name: ESLint Suggestion
-      uses: CatChen/eslint-suggestion-action@v2.1.18
+    - name: install ESLint
+      run: | 
+        npm init -y
+        npm install eslint
 
     - name: ESLint Annotate
       uses: a-b-r-o-w-n/eslint-action@v2
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: ESLint Plus
-      uses: bradennapier/eslint-plus-action@v3
+    - name: ESLint Action eslintrc
+      uses: mrdivyansh/eslint-action@v1.0.7
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
