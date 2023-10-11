@@ -14,6 +14,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 | Project Title | Contributor Names | Pull Requests | Demo |
 | :---: | :---: | :---: | :---: |
 | it should work now | [REC-SAM](https://github.com/REC-SAM "goto REC-SAM profile") | [#10](https://github.com/iamwatchdogs/moment-of-truth/pull/10 "visit pr \#10") | [/iamwatchdogs/moment-of-truth/it should work now/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/it%20should%20work%20now "view the result of it should work now") |
+| plz work this time | [REC-SAM](https://github.com/REC-SAM "goto REC-SAM profile") | [#11](https://github.com/iamwatchdogs/moment-of-truth/pull/11 "visit pr \#11") | [/iamwatchdogs/moment-of-truth/plz work this time/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/plz%20work%20this%20time "view the result of plz work this time") |
 <!-- TABLE ENDS -->
 
 </div>

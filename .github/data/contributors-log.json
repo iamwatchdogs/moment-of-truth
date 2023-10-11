@@ -7,5 +7,14 @@
       "10"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/it%20should%20work%20now"
+  },
+  "plz work this time": {
+    "contributor-name": [
+      "REC-SAM"
+    ],
+    "pull-request-number": [
+      "11"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/plz%20work%20this%20time"
   }
 }
