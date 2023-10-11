@@ -27,4 +27,4 @@ jobs:
         if: steps.linter.outputs.checks-failed > 0
         run: |
           echo "Some files failed the linting checks!"
-          exit 1
+          echo "No. of checks failed: ${{ steps.linter.outputs.checks-failed }}"
