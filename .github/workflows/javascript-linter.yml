@@ -1,4 +1,4 @@
-name: 'Javacript Linter'
+name: javascript-linter
 
 on:
   pull_request:
