@@ -1,0 +1,23 @@
+name: Java File Lint
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['**.java']
+    
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3.5.3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3.13.0
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Checkstyle for Java
+        uses: dbelyaev/action-checkstyle@v0.9.6
