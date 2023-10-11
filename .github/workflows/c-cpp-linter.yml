@@ -18,7 +18,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          style: file
+          style: ''
           thread-comments: true
           step-summary: true
 
