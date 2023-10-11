@@ -13,36 +13,6 @@ jobs:
     - name: Checking out the repo
       uses: actions/checkout@v4.1.0
       
-    - name: Set up Node.js
-      uses: actions/setup-node@v3.8.1
-      with:
-          node-version: 18
-
-    - name: Install Eslint
-      run: |
-        npm init -y
-        npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint typescript
-        
-    - name: Create ESLint configuration (if not already done)
-      run: |
-        if [ ! -f .eslintrc.js ]; then
-          touch .eslintrc.js
-          echo 'module.exports = {' >> .eslintrc.js
-          echo '  "root": true,' >> .eslintrc.js
-          echo '  "env": {' >> .eslintrc.js
-          echo '      "node": true' >> .eslintrc.js
-          echo '  },' >> .eslintrc.js
-          echo '  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],' >> .eslintrc.js
-          echo '  "plugins": ["@typescript-eslint"],' >> .eslintrc.js
-          echo '  "parserOptions": {' >> .eslintrc.js
-          echo '      "ecmaVersion": "latest",' >> .eslintrc.js
-          echo '      "sourceType": "module"' >> .eslintrc.js
-          echo '  },' >> .eslintrc.js
-          echo '}' >> .eslintrc.js
-          cat .eslintrc.js
-        fi
-
-    - name: Run ESLint
-      run: |
-        npx eslint . --ext .js,.ts
+    - name: Super-Linter
+      uses: super-linter/super-linter@v5.4.0
 
