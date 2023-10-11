@@ -1,7 +1,18 @@
-public class TEST 
+public class DeleteStart {  
+  
+    //Represent a node of the singly linked list  
+    class Node{  
+        int data;  
+        Node next;  
+  
+        public Node(int data) {  
+            this.data = data;  
+            this.next = null;  
+        }  
+    }  
   
     //Represent the head and tail of the singly linked list  
-    public Node head = null;
+    public Node head = null;  
     public Node tail = null;  
   
     //addNode() will add a new node to the list  
