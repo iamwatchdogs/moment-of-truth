@@ -5,6 +5,6 @@ int main()
 {
   int len = strlen("Hello World !!!...");
   printf("%d",len);
-  fail();
+  ffhnxfgnfhnfhnrfnfgkjhbhfdgkjlbdgbkl();
   return 0;
 }
