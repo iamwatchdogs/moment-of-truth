@@ -20,5 +20,3 @@ reversed_string = " ".join(reversed_words)
 
 # printing the reversed string
 print(reversed_string)
-
-#This code is contributed by Edula Vinay Kumar Reddy
