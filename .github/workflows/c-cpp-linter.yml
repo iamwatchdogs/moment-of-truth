@@ -20,13 +20,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           style: file
+          tidy-checks: ''
           thread-comments: true
           step-summary: true
           
-      - name: clang-format-12 -style=Google path/to/filename.x
-        run: |
-          clang-format-12 -style=Google c-cpp-test/should-not-pass.c
-          clang-format-12 -style=Google c-cpp-test/test.c
+      # - name: clang-format-12 -style=Google path/to/filename.x
+      #   run: |
+      #     clang-format-12 -style=Google c-cpp-test/should-not-pass.c
+      #     clang-format-12 -style=Google c-cpp-test/test.c
           
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed > 0
