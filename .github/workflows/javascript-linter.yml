@@ -17,6 +17,10 @@ jobs:
     #   uses: actions/setup-node@v3.8.1
     #   with:
     #     node-version: 12
+    - name: eslint action
+      uses: a-b-r-o-w-n/eslint-action@v2.2.0
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: eslint
       uses: bradennapier/eslint-plus-action@v3
