@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-  printf("Plz work this time, please work, please");
+  printf("it will work this time");
   return 0;
 }
