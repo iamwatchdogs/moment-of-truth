@@ -1,0 +1,25 @@
+name: 'Javacript Linter'
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['**.java']
+
+jobs:
+  eslint:
+    name: eslint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checking out the repo
+      uses: actions/checkout@v4.1.0
+      
+    - name: install node v12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+        
+    - name: yarn install
+      run: yarn install
+      
+    - name: eslint
+      uses: icrawl/action-eslint@v1
