@@ -9,7 +9,6 @@ jobs:
   cpp-linter:
     runs-on: ubuntu-latest
     steps:
-
       - name: Check out the repo
         uses: actions/checkout@v4.1.0
 
