@@ -21,6 +21,8 @@ jobs:
 
       - name: Checkstyle for Java
         uses: dbelyaev/action-checkstyle@v0.9.6
+        with:
+          fail_on_error: true
 
       # - name: Run check style
       #   uses: nikitasavinov/checkstyle-action@0.6.0
