@@ -16,11 +16,6 @@ jobs:
     - name: install node
       uses: actions/setup-node@v3.8.1
 
-    - name: install ESLint
-      run: | 
-        npm init -y
-        npm install eslint
-
     - name: ESLint Annotate
       uses: a-b-r-o-w-n/eslint-action@v2
       with:
