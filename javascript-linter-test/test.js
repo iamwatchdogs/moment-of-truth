@@ -10,6 +10,7 @@ function sum(num) {
 
 // take input from the user
 const number = parseInt(prompt('Enter a positive integer: '))
+
 const result = sum(number)
 
 // display the result
