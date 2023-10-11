@@ -3,7 +3,7 @@
 
 int main()
 {
-  int len = strlen("Hello World !!!...")
+  int len = strlen("Hello World !!!...");
   printf("length of \"Hello World !!!...\" is %d",len);
   return 0
 }
