@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(
+int main)
 {
   printf("Plz work this time");
   return 0;
