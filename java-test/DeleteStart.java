@@ -1,15 +1,4 @@
-public class TEST {  
-  
-    //Represent a node
-    class Node{  
-        int data;  
-        Node next;  
-  
-        public Node(int data) {  
-            this.data = data;  
-            this.next = null;  
-        }  
-    }  
+public class TEST 
   
     //Represent the head and tail of the singly linked list  
     public Node head = null;  
