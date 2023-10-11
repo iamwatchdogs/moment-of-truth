@@ -94,7 +94,7 @@ def main():
 		demo_path_output = f'<a href="{demo_path}" title="view the result of {title}">/{REPO_NAME}/{title}/</a>'
 
 		# Appending all data together
-		updated_lines.append('\t<tr>\n')
+		updated_lines.append('\t<tr align="center">\n')
 		updated_lines.append(f'\t\t<td>{title}</td>\n')
 		updated_lines.append(f'\t\t<td>{contributors_names_output}</td>\n')
 		updated_lines.append(f'\t\t<td>{pull_requests_output}</td>\n')
