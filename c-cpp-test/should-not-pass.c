@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(){
-  return nlkfjnv;
+  int test = 0;
+  return test;
 }
-ljsdkf
