@@ -40,10 +40,38 @@ jobs:
         uses: actions/setup-python@v4.7.1
         with:
            python-version: '3.12'
+        
+      # - name: Clang format diff
+      #   if: steps.linter.outputs.checks-failed > 0
+      #   uses: egor-tensin/clang-format@v1
 
-      - name: Clang format diff
+      - name: Install Clang
         if: steps.linter.outputs.checks-failed > 0
-        uses: egor-tensin/clang-format@v1
+        uses: egor-tensin/setup-clang@v1
+
+      - name: Getting PR details
+        if: steps.linter.outputs.checks-failed > 0
+        run: |
+          touch pr.json
+          gh pr view $PR_NUMBER --json files > pr.json
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python Script in Actions
+        if: steps.linter.outputs.checks-failed > 0
+        uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import os
+            import json
+            with open('pr.json','r') as json:
+              data = json.load(json)
+              for file in data["files"]:
+                path = file["path"]
+                if os.path.exists(path):
+                  os.system(f'clang-format-12 -style=Google {path}')
+                  print('\n----------------------------------------\n'
 
       - name: Trigger ci failed exit code
         if: steps.linter.outputs.checks-failed > 0
