@@ -39,7 +39,7 @@ jobs:
           echo '      "sourceType": "module"' >> .eslintrc.js
           echo '  },' >> .eslintrc.js
           echo '}' >> .eslintrc.js
-          cat .eslintrc
+          cat .eslintrc.js
         fi
 
     - name: Run ESLint
