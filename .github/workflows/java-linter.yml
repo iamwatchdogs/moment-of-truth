@@ -24,3 +24,5 @@ jobs:
 
       - name: Run check style
         uses: nikitasavinov/checkstyle-action@0.6.0
+        with:
+          fail_on_error: true
