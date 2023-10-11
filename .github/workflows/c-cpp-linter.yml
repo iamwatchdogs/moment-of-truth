@@ -15,6 +15,7 @@ jobs:
         
       - uses: cpp-linter/cpp-linter-action@v2.6.1
         id: linter
+        continue-on-error: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
