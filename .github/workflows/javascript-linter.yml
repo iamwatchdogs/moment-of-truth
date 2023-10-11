@@ -21,8 +21,14 @@ jobs:
     - name: Install Eslint
       run: |
         npm init -y
-        npm install eslint
+        npm install eslint --save-dev
         
+    - name: Create ESLint configuration (if not already done)
+      run: |
+        if [ ! -f .eslintrc.js ]; then
+          npx eslint --init
+        fi
+
     - name: Run ESLint
       run: |
         npm run lint
