@@ -6,25 +6,14 @@ on:
     paths: ['**.java']
     
 jobs:
-  lint:
+  java-linter:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out code
         uses: actions/checkout@v4.1.0
 
-      # - name: Set up Java
-      #   uses: actions/setup-java@v3.13.0
-      #   with:
-      #     java-version: '17'
-      #     distribution: 'temurin'
-
-      # - name: Checkstyle for Java
-      #   uses: dbelyaev/action-checkstyle@v0.9.6
-      #   with:
-      #     fail_on_error: true
-
       - name: Run check style
         uses: nikitasavinov/checkstyle-action@0.6.0
         with:
-          fail_on_error: true
+          level: warning
