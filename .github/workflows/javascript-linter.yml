@@ -13,12 +13,16 @@ jobs:
     - name: Checking out the repo
       uses: actions/checkout@v4.1.0
 
-    # - name: install node v12
-    #   uses: actions/setup-node@v3.8.1
-    #   with:
-    #     node-version: 12
+    - name: install node
+      uses: actions/setup-node@v3.8.1
 
-    - name: eslint
+    - name: ESLint Suggestion
+      uses: CatChen/eslint-suggestion-action@v2.1.18
+
+    - name: ESLint Annotate
+      uses: a-b-r-o-w-n/eslint-action@v2
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: ESLint Plus
       uses: bradennapier/eslint-plus-action@v3
-      with: 
-        issueSummaryType: full
