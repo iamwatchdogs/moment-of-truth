@@ -1,32 +1,18 @@
-# Python program for the above approach
+def reverse_words(string):
+	# split the string into a list of words
+	words = string.split()
 
-# Function to reverse the words in string
-def reverse_word(s, start, end):
-	while start < end:
-		s[start], s[end] = s[end], s[start]
-		start += 1
-		end -= 1
+	# initialize an empty string to store the reversed words
+	reversed_string = ''
 
-# Function to reverse the string
-def reverse_string(s):
-	s = list(s)
-	start, end = 0, len(s) - 1
-	reverse_word(s, start, end)
+	# loop through the words in reverse order and append them to the reversed string
+	for i in range(len(words)-1, -1, -1):
+		reversed_string += words[i] + ' '
 
-	start = end = 0
+	# remove the extra space at the end of the reversed string and return it
+	return reversed_string.strip()
 
-	# Iterate over the string S
-	while end < len(s):
-		if s[end] == ' ':
-			reverse_word(s, start, end - 1)
-			start = end + 1
-		end += 1
-
-	# Reverse the words
-	reverse_word(s, start, end - 1)
-	return ''.join(s)
-
-
-# Driver Code
-S = "geeks quiz practice code"
-print(reverse_string(S))
+# example usage
+string = "geeks quiz practice code"
+reversed_string = reverse_words(string)
+print(reversed_string) # output: "code practice quiz geeks"
