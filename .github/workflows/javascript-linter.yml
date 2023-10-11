@@ -3,7 +3,7 @@ name: javascript-linter
 on:
   pull_request:
     branches: [main]
-    paths: ['**.java']
+    paths: ['**.js', '**.jsx', '**.ts', '**.tsx']
 
 jobs:
   eslint:
@@ -12,14 +12,13 @@ jobs:
     steps:
     - name: Checking out the repo
       uses: actions/checkout@v4.1.0
-      
-    - name: install node v12
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-        
-    - name: yarn install
-      run: yarn install
-      
+
+    # - name: install node v12
+    #   uses: actions/setup-node@v3.8.1
+    #   with:
+    #     node-version: 12
+
     - name: eslint
-      uses: icrawl/action-eslint@v1
+      uses: bradennapier/eslint-plus-action@v3
+      with: 
+        issueSummaryType: full
