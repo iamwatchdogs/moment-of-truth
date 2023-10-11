@@ -36,10 +36,6 @@ jobs:
         with:
            python-version: '3.12'
 
-      - name: Install Clang
-        if: steps.linter.outputs.checks-failed > 0
-        uses: egor-tensin/setup-clang@v1
-
       - name: Getting PR details
         if: steps.linter.outputs.checks-failed > 0
         run: |
