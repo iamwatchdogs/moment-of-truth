@@ -19,12 +19,12 @@ jobs:
       #     java-version: '17'
       #     distribution: 'temurin'
 
-      - name: Checkstyle for Java
-        uses: dbelyaev/action-checkstyle@v0.9.6
-        with:
-          fail_on_error: true
-
-      # - name: Run check style
-      #   uses: nikitasavinov/checkstyle-action@0.6.0
+      # - name: Checkstyle for Java
+      #   uses: dbelyaev/action-checkstyle@v0.9.6
       #   with:
       #     fail_on_error: true
+
+      - name: Run check style
+        uses: nikitasavinov/checkstyle-action@0.6.0
+        with:
+          fail_on_error: true
