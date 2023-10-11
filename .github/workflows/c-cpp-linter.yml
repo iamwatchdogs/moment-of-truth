@@ -30,23 +30,22 @@ jobs:
       #   run: |
       #     clang-format-12 -style=Google c-cpp-test/should-not-pass.c
       #     clang-format-12 -style=Google c-cpp-test/test.c
-          
-  help-for-failed-ci:
-    runs-on: ubuntu-latest
-    needs: cpp-linter
-    if: cpp-linter.steps.linter.outputs.checks-failed > 0
-    steps:
+
       - name: Fail fast?!
+        if: cpp-linter.steps.linter.outputs.checks-failed > 0
         run: |
           echo "Some files failed the linting checks!"
           echo "No. of checks failed: ${{ steps.linter.outputs.checks-failed }}"
           echo "Use the clang-format diffs to find more help"
 
       - name: Setup Python
+        if: cpp-linter.steps.linter.outputs.checks-failed > 0
         uses: actions/setup-python@v4.7.1
 
-      - name: Fail fast?!
+      - name: Clang format diff
+        if: cpp-linter.steps.linter.outputs.checks-failed > 0
         uses: egor-tensin/clang-format@v1
 
-      - name: Trigger ci failed exit code 
+      - name: Trigger ci failed exit code
+        if: cpp-linter.steps.linter.outputs.checks-failed > 0
         run: exit 1
