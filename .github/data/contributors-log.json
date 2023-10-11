@@ -39,5 +39,14 @@
       "20"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/"
+  },
+  "c-cpp-test": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "21"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/c-cpp-test"
   }
 }
