@@ -1,4 +1,4 @@
-public class DeleteStart {  
+public class TEST {  
   
     //Represent a node
     class Node{  
