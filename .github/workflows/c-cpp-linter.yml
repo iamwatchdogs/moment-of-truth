@@ -6,7 +6,7 @@ on:
     paths: ['**.c', '**.cpp']
 
 jobs:
-  cpp-linter:
+  c-cpp-linter:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -70,6 +70,7 @@ jobs:
                   os.system('echo ---------------------------------------- >> res')
 
       - name: Show diffs and exit
+        if: steps.linter.outputs.checks-failed > 0
         run: |
           cat res
           exit 1
