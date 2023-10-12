@@ -3,7 +3,7 @@ name: c-cpp-linter
 on:
   pull_request:
     branches: [main]
-    paths: ['**.c', '**.cpp']
+    paths: ['**.c', '**.cpp', '**.h', '**.hpp', '**.cc', '**.hh', '**.cxx', '**.hxx']
 
 jobs:
   c-cpp-linter:
