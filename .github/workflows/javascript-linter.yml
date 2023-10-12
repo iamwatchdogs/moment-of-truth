@@ -49,4 +49,4 @@ jobs:
 
     - name: eslint
       run: |
-        npx eslint ./ **.js
+        npx eslint ./ */**.js
