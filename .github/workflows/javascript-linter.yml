@@ -16,7 +16,7 @@ jobs:
     - name: Setting up Node.js environment
       uses: actions/setup-node@v3.8.1
       with:
-        version: 18
+        node-version: 18
 
     - name: Setting up eslint
       run: |
