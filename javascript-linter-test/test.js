@@ -13,4 +13,4 @@ const number = parseInt(prompt('Enter a positive integer: '))
 const result = sum(number)
 
 // display the result
-console.log(`The sum is ${result}`)
+console.log(`The sum is ${result}`);
