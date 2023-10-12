@@ -17,3 +17,4 @@ jobs:
         uses: nikitasavinov/checkstyle-action@0.6.0
         with:
           level: warning
+          fail_on_error: true
