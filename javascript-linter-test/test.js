@@ -1,5 +1,5 @@
 // program to find the sum of natural numbers using recursion
-function sum(num) {
+const sum = (num) => {
     if(num > 0) {
         return num + sum(num - 1)
     }
