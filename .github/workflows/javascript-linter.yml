@@ -41,9 +41,6 @@ jobs:
             "parserOptions": {
               "ecmaVersion": "latest",
               "sourceType": "module"
-            },
-            "rules": {
-              "strict": "off"
             }
           }
 
