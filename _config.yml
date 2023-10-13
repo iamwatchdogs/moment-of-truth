@@ -9,9 +9,10 @@ defaults:
   - scope:
       path: ''
     values:
-      image: 'assets/imgs/og-dp.jpg'
-      width: 1200
-      height: 630
+      image: 
+        path: 'assets/imgs/og-dp.jpg'
+        height: 630
+        width: 1200
 exclude:
   - README.md
   - CONTRIBUTING.md
