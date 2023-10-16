@@ -7,5 +7,7 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
     - name: launch manual workflow-super linter
-      extends: ./.github/workflows/manual.yml
+      uses: ./.github/workflows/manual.yml
