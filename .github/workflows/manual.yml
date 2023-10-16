@@ -1,0 +1,11 @@
+name: Test
+
+on:
+  workflow_call:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Super-Linter
+      uses: super-linter/super-linter@v5.4.0
