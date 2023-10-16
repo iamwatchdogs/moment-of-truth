@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: launch manual workflow-super linter
-      uses: ./.github/workflows/manual.yml
+      extends: ./.github/workflows/manual.yml
