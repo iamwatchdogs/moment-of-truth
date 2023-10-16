@@ -4,10 +4,8 @@ on:
   workflow_call:
 
 jobs:
-  greet:
+  lint:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v4.1.0
     - name: Super-Linter
       uses: super-linter/super-linter@v5.4.0
