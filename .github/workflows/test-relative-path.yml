@@ -1,0 +1,23 @@
+name: Testing-Manual
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+    - name: checking pwd
+      run: |
+        pwd
+    - name: checking ls ~/
+      run: |
+        ls ~/
+    - name: checking ls ./
+      run: |
+        ls ./
+    - name: checking ls /
+      run: |
+        ls /
