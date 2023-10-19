@@ -1,4 +1,4 @@
-name: Testing-Manual
+name: Testing-relative-path
 
 on:
   workflow_dispatch:
