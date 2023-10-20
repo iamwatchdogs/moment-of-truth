@@ -68,7 +68,7 @@ jobs:
                     checks['javascript']='true'
                   elif path.endswith('.py'):
                     checks['python']='true'
-                  elif path.split('/')[-1].contains('.') and not path.endswith('.md'):
+                  elif '.' in path.split('/')[-1] and not path.endswith('.md'):
                     checks['other']='true'
 
           # Setting output variables based on file extensions
