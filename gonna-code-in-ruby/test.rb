@@ -1,6 +1,4 @@
 # Ruby program to get the length of 
-# an array using length() method
-
 arr1 = [101,"Rahul",15000];
 arr2 = [101,102,103,104,105];
 arr3 = Array.new(10);
