@@ -18,6 +18,7 @@ jobs:
       needs_java_linting: ${{ steps.check_extension.outputs.java}}
       needs_javascript_linting: ${{ steps.check_extension.outputs.javascript }}
       needs_python_linting: ${{ steps.check_extension.outputs.python }}
+      needs_other_linting: ${{ steps.check_extension.outputs.other }}
     steps:
     - name: Checking out the repo
       uses: actions/checkout@v4.1.0
@@ -39,7 +40,7 @@ jobs:
           import json
 
           # Setting default variables
-          checks = { lang:'false' for lang in ['c_cpp', 'java', 'javascript', 'python'] }
+          checks = { lang:'false' for lang in ['c_cpp', 'java', 'javascript', 'python', 'other'] }
           c_cpp_ext = ['.c', '.cpp', '.h', '.hpp', '.cc', '.hh', '.cxx', '.hxx']
 
           # Reading contents of PR
@@ -67,6 +68,8 @@ jobs:
                     checks['javascript']='true'
                   elif path.endswith('.py'):
                     checks['python']='true'
+                  elif path.split('/')[-1].contains('.') and not path.endswith('.md'):
+                    checks['other']='true'
 
           # Setting output variables based on file extensions
           for lang,val in checks.items():
@@ -96,10 +99,11 @@ jobs:
     needs: [checkout, c-cpp-linter, java-linter, javascript-linter, python-linter]
     if: ${{ 
             always() &&
-            (needs.c-cpp-linter.result == 'skipped' || needs.checkout.outputs.needs_c_cpp_linting == 'false') &&
+            needs.checkout.outputs.needs_other_linting == 'true' ||
+            ((needs.c-cpp-linter.result == 'skipped' || needs.checkout.outputs.needs_c_cpp_linting == 'false') &&
             (needs.java-linter.result == 'skipped' || needs.checkout.outputs.needs_java_linting == 'false') &&
             (needs.javascript-linter.result == 'skipped' || needs.checkout.outputs.needs_javascript_linting == 'false') &&
-            (needs.python-linter.result == 'skipped' || needs.checkout.outputs.needs_python_linting == 'false')
+            (needs.python-linter.result == 'skipped' || needs.checkout.outputs.needs_python_linting == 'false'))
           }}
     runs-on: ubuntu-latest
     steps:
