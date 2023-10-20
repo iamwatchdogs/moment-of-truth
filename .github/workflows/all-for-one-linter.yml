@@ -21,7 +21,7 @@ jobs:
       needs_other_linting: ${{ steps.check_extension.outputs.other }}
     steps:
     - name: Checking out the repo
-      uses: actions/checkout@v4.1.0
+      uses: actions/checkout@v4
       with:
        fetch-depth: 0
     - name: Setup Python
@@ -110,7 +110,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Super Linter
-      uses: super-linter/super-linter@v5.4.3
+      uses: super-linter/super-linter@v5
       env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
