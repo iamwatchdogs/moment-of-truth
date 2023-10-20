@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-
-  int base;
+int main(){
+  int base
   int exp;
   long double result = 1.0;
   printf("Enter a base number: ");
