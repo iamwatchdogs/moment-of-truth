@@ -107,19 +107,15 @@ jobs:
             (needs.javascript-linter.result == 'skipped' || needs.checkout.outputs.needs_javascript_linting == 'false') &&
             (needs.python-linter.result == 'skipped' || needs.checkout.outputs.needs_python_linting == 'false'))
           }}
-    # runs-on: ubuntu-latest
-    # steps:
-    # - name: Checking out the repo
-    #   uses: actions/checkout@v4
-    #   with:
-    #    fetch-depth: 0
-    # - name: git check
-    #   run: |
-    #     git branch
-    # - name: Super Linter
-    #   uses: super-linter/super-linter@v5
-    #   env:
-    #       VALIDATE_ALL_CODEBASE: false
-    #       DEFAULT_BRANCH: main
-    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    uses: oracle/docker-images/.github/workflows/super-linter.yml@main
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checking out the repo
+      uses: actions/checkout@v4
+      with:
+       fetch-depth: 0
+    - name: Super Linter
+      uses: super-linter/super-linter@v5
+      env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
