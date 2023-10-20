@@ -109,6 +109,13 @@ jobs:
           }}
     runs-on: ubuntu-latest
     steps:
+    - name: Checking out the repo
+      uses: actions/checkout@v4
+      with:
+       fetch-depth: 0
+    - name: git check
+      run: |
+        git branch
     - name: Super Linter
       uses: super-linter/super-linter@v5
       env:
