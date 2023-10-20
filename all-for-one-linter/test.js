@@ -1,5 +1,3 @@
-// program to pass a function as a parameter
-
 function greet() {
     return 'Hello';
 }
