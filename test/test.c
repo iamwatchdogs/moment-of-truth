@@ -1,3 +1,4 @@
+// Copyright 2023 @ShamithNakka
 #include <stdio.h>
 
 int main() {
