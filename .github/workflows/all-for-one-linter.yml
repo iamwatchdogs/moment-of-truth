@@ -80,7 +80,7 @@ jobs:
  java-linter:
     needs: [checkout]
     if: ${{ needs.checkout.outputs.needs_java_linting == 'true' }}
-    uses: Grow-with-Open-Source/Java-Projects/.github/workflows/linters/java-linter.yml@main
+    uses: Grow-with-Open-Source/Java-Projects/.github/workflows/java-linter.yml@main
 
  javascript-linter:
     needs: [checkout]
@@ -90,7 +90,7 @@ jobs:
  python-linter:
     needs: [checkout]
     if: ${{ needs.checkout.outputs.needs_python_linting == 'true' }}
-    uses: Grow-with-Open-Source/Python-Projects/.github/workflows/linters/python-linter.yml@main
+    uses: Grow-with-Open-Source/Python-Projects/.github/workflows/python-linter.yml@main
   
  other-linter:
     needs: [checkout, c-cpp-linter, java-linter, javascript-linter, python-linter]
