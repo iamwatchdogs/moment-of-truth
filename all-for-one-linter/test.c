@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+
   int base;
   int exp;
   long double result = 1.0;
