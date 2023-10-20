@@ -27,7 +27,7 @@ jobs:
     - name: Fetching PR Details
       run: |
           touch pr.json
-          gh pr view $PR_NUMBER --json afiles > pr.json
+          gh pr view $PR_NUMBER --json files > pr.json
       env:
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
