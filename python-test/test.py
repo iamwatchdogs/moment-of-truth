@@ -5,7 +5,7 @@ string = "geeks quiz practice code"
 stack = []
 
 # pushing words onto the stack
-for word in string.split()
+for word in string.split():
 	stack.append(word)
 
 # creating an empty list to store the reversed words
