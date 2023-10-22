@@ -57,5 +57,14 @@
       "31"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/auto-commenter-test"
+  },
+  "aut0-coommenter-tester": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "32"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/aut0-coommenter-tester"
   }
 }

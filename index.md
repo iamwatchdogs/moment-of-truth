@@ -19,6 +19,7 @@ Lorem **Ipsum is simply** dummy text of the printing [and typesetting](google.co
 | root | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#20](https://github.com/iamwatchdogs/moment-of-truth/pull/20 "visit pr \#20") | [/iamwatchdogs/moment-of-truth/root/](https://github.com/iamwatchdogs/moment-of-truth/ "view the result of root") |
 | c-cpp-test | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#21](https://github.com/iamwatchdogs/moment-of-truth/pull/21 "visit pr \#21") | [/iamwatchdogs/moment-of-truth/c-cpp-test/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/c-cpp-test "view the result of c-cpp-test") |
 | auto-commenter-test | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#31](https://github.com/iamwatchdogs/moment-of-truth/pull/31 "visit pr \#31") | [/iamwatchdogs/moment-of-truth/auto-commenter-test/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/auto-commenter-test "view the result of auto-commenter-test") |
+| aut0-coommenter-tester | [iamwatchdogs](https://github.com/iamwatchdogs "goto iamwatchdogs profile") | [#32](https://github.com/iamwatchdogs/moment-of-truth/pull/32 "visit pr \#32") | [/iamwatchdogs/moment-of-truth/aut0-coommenter-tester/](https://github.com/iamwatchdogs/moment-of-truth/tree/main/aut0-coommenter-tester "view the result of aut0-coommenter-tester") |
 <!-- TABLE ENDS -->
 
 </div>
