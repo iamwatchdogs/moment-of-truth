@@ -54,7 +54,8 @@
       "iamwatchdogs"
     ],
     "pull-request-number": [
-      "31"
+      "31",
+      "33"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/auto-commenter-test"
   },
