@@ -19,6 +19,7 @@ jobs:
 
   need-help:
     runs-on: ubuntu-latest
+    needs: [java-linter]
     if: ${{ failure() }}
     steps:
       - name: Setting up python
