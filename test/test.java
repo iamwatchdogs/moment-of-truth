@@ -2,8 +2,8 @@ import java.util.Stack;
 
 class Main {
 
-    public static boolean backspaceCompare(String s, String t) {
-        Stack<Character> s1 = new Stack<>();
+    public static boolean backspaceCompare(String s, String t) 
+        Stack<Character> s1 = new Stack<>()
         Stack<Character> s2 = new Stack<>();
         
         for (char ch : s.toCharArray()) {
