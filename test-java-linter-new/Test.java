@@ -2,10 +2,9 @@ import java.util.Stack;
 
 class Main {
 
-    public static boolean backspaceCompare(String s, String t) {
+    public static boolean backspaceCompare(String s, String t) 
         Stack<Character> s1 = new Stack<>();
         Stack<Character> s2 = new Stack<>();
-        
         for (char ch : s.toCharArray()) {
             if (ch == '#') {
                 if (!s1.isEmpty()) {
@@ -15,7 +14,6 @@ class Main {
             }
             s1.push(ch);
         }
-        
         for (char ch : t.toCharArray()) {
             if (ch == '#') {
                 if (!s2.isEmpty()) {
