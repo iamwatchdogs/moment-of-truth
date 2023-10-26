@@ -4,17 +4,61 @@ on:
   pull_request:
     branches: [main]
     paths: ['**.java']
+  workflow_dispatch:
+    inputs:
+      format-the-code:
+        description: 'Triggers the workflow that uses clang to format your code to minimize the formatting-related issues.'
+        type: boolean
+        default: false
     
 jobs:
   java-linter:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out code
         uses: actions/checkout@v4.1.0
-
       - name: Run check style
         uses: nikitasavinov/checkstyle-action@0.6.0
         with:
           level: warning
           fail_on_error: true
+
+  need-help:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.format-the-code }}
+    steps:
+      - name: Setting up python
+        uses: actions/setup-python@v4.7.1
+        with:
+           python-version: '3.12'
+      - name: Install Clang
+        uses: egor-tensin/setup-clang@v1
+      - name: Getting PR details
+        run: |
+          touch pr.json                                 # creating empty file for paths
+          gh pr view $PR_NUMBER --json files > pr.json  # storing file paths
+          touch res                                     # creating empty file for final output
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Python script for clang diff
+        uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import os
+            import json
+            import sys
+            with open('pr.json','r') as json_file:
+              data = json.load(json_file)
+              for file in data["files"]:
+                path = file["path"]
+                if os.path.exists(path):
+                  os.system('echo "" >> res')
+                  os.system(f'echo "Filename: {path}" >> res')
+                  os.system('echo "" >> res')
+                  os.system(f'clang-format-12 -style=Google {path} >> res')
+                  os.system('echo ---------------------------------------- >> res')
+      - name: Show diffs and exit
+        run: |
+          cat res 
+        
