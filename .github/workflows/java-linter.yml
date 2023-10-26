@@ -4,12 +4,6 @@ on:
   pull_request:
     branches: [main]
     paths: ['**.java']
-  workflow_dispatch:
-    inputs:
-      format-the-code:
-        description: 'Triggers the workflow that uses clang to format your code to minimize the formatting-related issues.'
-        type: boolean
-        default: false
     
 jobs:
   java-linter:
@@ -25,7 +19,7 @@ jobs:
 
   need-help:
     runs-on: ubuntu-latest
-    if: ${{ inputs.format-the-code }}
+    if: ${{ failure() }}
     steps:
       - name: Setting up python
         uses: actions/setup-python@v4.7.1
