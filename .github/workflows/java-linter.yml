@@ -53,7 +53,7 @@ jobs:
                   os.system('echo "" >> res')
                   os.system(f'echo "Filename: {path}" >> res')
                   os.system('echo "" >> res')
-                  os.system(f'clang-format-12 -style=Google {path} >> res')
+                  os.system(f'clang-format -style=Google {path} >> res')
                   os.system('echo ---------------------------------------- >> res')
       - name: Show diffs and exit
         run: |
