@@ -22,6 +22,8 @@ jobs:
     needs: [java-linter]
     if: ${{ failure() }}
     steps:
+      - name: Check out code
+        uses: actions/checkout@v4.1.0
       - name: Setting up python
         uses: actions/setup-python@v4.7.1
         with:
