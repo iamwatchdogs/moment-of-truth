@@ -37,7 +37,8 @@
       "iamwatchdogs"
     ],
     "pull-request-number": [
-      "20"
+      "20",
+      "30"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/"
   },
