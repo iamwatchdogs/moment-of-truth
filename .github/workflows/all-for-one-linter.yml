@@ -21,10 +21,7 @@ jobs:
       needs_other_linting: ${{ steps.check_extension.outputs.other }}
     steps:
     - name: Checking out the repo
-      uses: actions/checkout@v4.1.0
-      with:
-       fetch-depth: 0
-       
+      uses: actions/checkout@v4.1.1
     - name: Setup Python
       uses: actions/setup-python@v4.7.1
     - name: Fetching PR Details
@@ -110,6 +107,11 @@ jobs:
           }}
     runs-on: ubuntu-latest
     steps:
+    - name: Checking out the repo
+      uses: actions/checkout@v4.1.1
+      with:
+       fetch-depth: 0
+       ref: ${{ github.event.pull_request.head.ref }}
     - name: Super Linter
       uses: super-linter/super-linter@v5.4.3
       env:
