@@ -76,5 +76,14 @@
       "37"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/test"
+  },
+  "another-test": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "38"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/another-test"
   }
 }
