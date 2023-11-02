@@ -21,5 +21,4 @@ jobs:
           # pullRequestClosed: >
           #   👋 @{{ author }} This PR is closed.
 
-          pullRequestMerged: |
-            Thank you for contributing @{{{ author }}, makes sure to check your contributions [here](https://iamwatchdogs.github.io/moment-of-truth/).
+          pullRequestMerged: "Thank you for contributing @{{{ author }}, Makes sure to check your contributions [here](https://iamwatchdogs.github.io/moment-of-truth/)."
