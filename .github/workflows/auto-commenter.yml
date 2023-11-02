@@ -22,6 +22,15 @@ jobs:
           #   👋 @{{ author }} This PR is closed.
 
           pullRequestMerged: |
-            Thank you for contributing @{{{ author }}, 
-            Makes sure to check your contributions 
-            https://iamwatchdogs.github.io/moment-of-truth/
+            "Hi @{{ author }},
+
+            It looks like your issue has been transferred to the Consul on Kubernetes repository.
+            If your issue is a question or bug report, there is some additional context that will
+            help us solve your issue. Please reply with the following information if it is not
+            included in your original issue:
+
+            - the [Helm values](https://www.consul.io/docs/k8s/helm) you used to install Consul
+            on Kubernetes
+            - the version of Consul on Kubernetes used
+            - the version of Kubernetes you are using
+            - if you installed Consul on Kubernetes using Helm or the Consul-K8s CLI"
