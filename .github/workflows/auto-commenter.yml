@@ -23,4 +23,4 @@ jobs:
 
           pullRequestMerged: |
             Thank you for contributing @{{{ author }}, 
-            Makes sure to check your contributions [here](https://iamwatchdogs.github.io/moment-of-truth/)
+            Makes sure to check your contributions <https://iamwatchdogs.github.io/moment-of-truth/>.
