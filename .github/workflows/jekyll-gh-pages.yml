@@ -54,17 +54,17 @@ jobs:
         uses: actions/deploy-pages@v2
 
   # automated message for contributors
-  automated-message:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: wow-actions/auto-comment@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # automated-message:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: wow-actions/auto-comment@v1
+  #       with:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # pullRequestClosed: >
-          #   👋 @{{ author }} This PR is closed.
+  #         # pullRequestClosed: >
+  #         #   👋 @{{ author }} This PR is closed.
 
-          pullRequestMerged: >
-            👋 @{{ author }} This PR is merged.
+  #         pullRequestMerged: >
+  #           👋 @{{ author }} This PR is merged.
 
           # Thank you for contributing @{{{ author }}, makes sure to check your contributions [here](https://iamwatchdogs.github.io/moment-of-truth/).
