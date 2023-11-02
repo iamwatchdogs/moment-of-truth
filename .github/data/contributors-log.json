@@ -27,7 +27,8 @@
       "14",
       "16",
       "17",
-      "19"
+      "19",
+      "26"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/.github"
   },
@@ -36,7 +37,8 @@
       "iamwatchdogs"
     ],
     "pull-request-number": [
-      "20"
+      "20",
+      "30"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/"
   },
@@ -48,5 +50,62 @@
       "21"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/c-cpp-test"
+  },
+  "auto-commenter-test": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "31",
+      "33"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/auto-commenter-test"
+  },
+  "aut0-coommenter-tester": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "32"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/aut0-coommenter-tester"
+  },
+  "test": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "37",
+      "36",
+      "35"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/test"
+  },
+  "another-test": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "38"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/another-test"
+  },
+  "final-test-for-autmated-commenter-question-mark": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "39"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/final-test-for-autmated-commenter-question-mark"
+  },
+  "test-java-linter-new": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "34"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/test-java-linter-new"
   }
 }
