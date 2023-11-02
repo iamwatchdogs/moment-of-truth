@@ -85,5 +85,14 @@
       "38"
     ],
     "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/another-test"
+  },
+  "final-test-for-autmated-commenter-question-mark": {
+    "contributor-name": [
+      "iamwatchdogs"
+    ],
+    "pull-request-number": [
+      "39"
+    ],
+    "demo-path": "https://github.com/iamwatchdogs/moment-of-truth/tree/main/final-test-for-autmated-commenter-question-mark"
   }
 }
